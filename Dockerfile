@@ -4,6 +4,8 @@ RUN mkdir -p /app/coze-discord-proxy/data/config && chmod 777 /app/coze-discord-
 RUN printf '%s' "$BOT_CONFIG" | sed 's/\\/"/g' > /app/coze-discord-proxy/data/config/bot_config.json
 
 RUN tree /app/coze-discord-proxy/data/
+RUN ls -l /app/coze-discord-proxy/data/config/
+RUN stat /app/coze-discord-proxy/data/config/bot_config.json
 RUN cat /app/coze-discord-proxy/data/config/bot_config.json
 
 WORKDIR /app/coze-discord-proxy/data
