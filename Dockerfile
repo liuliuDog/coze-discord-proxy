@@ -1,6 +1,6 @@
 FROM deanxv/coze-discord-proxy:latest
 
-RUN tree /app/coze-discord-proxy/
+RUN tree /app/
 RUN mkdir -p /app/coze-discord-proxy/data/config && chmod 777 /app/coze-discord-proxy/data/config
 RUN cat /etc/secrets/bot_config > /app/coze-discord-proxy/data/config/bot_config.json
 
