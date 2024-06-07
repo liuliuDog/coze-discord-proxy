@@ -8,8 +8,6 @@ import (
 var MultiBotConfig = os.Getenv("MULTI_BOT_CONFIG")
 
 func loadMultiBotConfig() []byte {
-    if MultiBotConfig != "" {
-	common.SysLog("读取到配置,", MultiBotConfig)
-	return []byte(MultiBotConfig)
-    }
+    common.SysLog("读取配置,", MultiBotConfig)
+    return []byte(MultiBotConfig)
 }
