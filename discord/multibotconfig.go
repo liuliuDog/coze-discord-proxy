@@ -25,6 +25,7 @@ func WriteBotConfig(config string) error {
         }
     }
 
+    common.SysLog("文件创建成功.")
     // 将字符串写入文件
     return os.WriteFile("config/bot_config.json", []byte(config), 0644)
 }
