@@ -232,6 +232,7 @@ func checkEnvVariable() {
 }
 
 func loadBotConfig() {
+	common.SysError("123")
 	// 检查文件是否存在
 	_, err := os.Stat("config/bot_config.json")
 	if err != nil {
@@ -240,7 +241,7 @@ func loadBotConfig() {
 		}
 		return
 	}
-
+        common.SysError("3243")
 	// 读取文件
 	file, err := os.ReadFile("config/bot_config.json")
 	if err != nil {
