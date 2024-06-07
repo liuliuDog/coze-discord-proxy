@@ -1,7 +1,7 @@
 package discord
 
 import (
-	"encoding/json"
+	"coze-discord-proxy/common"
 	"os"
 )
 
@@ -29,11 +29,11 @@ func WriteBotConfig(config string) error {
 }
 
 func loadMultiBotConfig() {
-	if MultiBotConfig != "" {
-		if err := WriteBotConfig(MultiBotConfig); err != nil {
-      fmt.Println("无法写入配置文件：", err)
-    } else {
-	  common.SysLog("配置文件写入成功.")
+    if MultiBotConfig != "" {
+	if err := WriteBotConfig(MultiBotConfig); err != nil {
+            common.FatalLog("配置文件写入失败,", err)
+        } else {
+            common.SysLog("配置文件写入成功.")
+        }
     }
-	}
 }
