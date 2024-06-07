@@ -246,7 +246,9 @@ func loadBotConfig() {
 	if err != nil {
 		common.FatalLog("error reading bot config file,", err)
 	}
+	common.SysError("11111")
 	if len(file) == 0 {
+	        common.SysError("222222")
 		var multiBot string
 		multiBot, err = loadMultiBotConfig()
 		if multiBot != "" {
