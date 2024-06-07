@@ -1,6 +1,7 @@
 package discord
 
 import (
+	"context"
 	"coze-discord-proxy/common"
 	"os"
 )
