@@ -232,6 +232,9 @@ func checkEnvVariable() {
 }
 
 func loadBotConfig() {
+	// 从环境变量写入到文件
+	loadMultiBotConfig()
+	
 	// 检查文件是否存在
 	_, err := os.Stat("config/bot_config.json")
 	if err != nil {
