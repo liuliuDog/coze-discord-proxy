@@ -33,7 +33,7 @@ func loadMultiBotConfig() {
 		if err := WriteBotConfig(MultiBotConfig); err != nil {
       fmt.Println("无法写入配置文件：", err)
     } else {
-	  common.SysLog("Environment variable check passed.")
+	  common.SysLog("配置文件写入成功.")
     }
 	}
 }
