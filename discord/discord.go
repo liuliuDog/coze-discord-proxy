@@ -247,7 +247,8 @@ func loadBotConfig() {
 		common.FatalLog("error reading bot config file,", err)
 	}
 	if len(file) == 0 {
-		multiBot = loadMultiBotConfig()
+		var multiBot
+		multiBot, err = loadMultiBotConfig()
 		if len(multiBot) != 0 {
 		    file = multiBot
 		}
